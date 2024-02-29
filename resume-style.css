@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #222;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 50px;
+    max-height: 50px; 
+    border-radius: 50%;
+}
+
+main {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.resume-box {
+    background-color: #222;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-box:hover {
+    transform: scale(1.05);
+}
+
+.resume-box.projects-box {
+    display: block;
+    background-color: #222;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.resume-box.projects-box:hover {
+    transform: scale(1.05);
+    background-color: #3498db;
+}
+
+h2,
+p,
+li {
+    color: #fff;
+    font-size: 100%;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.resume-box ul {
+    text-align: left;
+}
+
+.resume-box ul li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.resume-box ul ul {
+    margin-top: 10px;
+}
+
+.skills-interests-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.skills-box,
+.interests-box {
+    width: 30%; /* Adjusted width */
+    background-color: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.skills-box:hover,
+.interests-box:hover {
+    transform: scale(1.05);
+}
+
+.skills-box h2,
+.interests-box h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.skills-box ul,
+.interests-box ul {
+    text-align: left;
+}
+
+.skills-box ul li,
+.interests-box ul li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.skills-box ul ul,
+.interests-box ul ul {
+    margin-top: 10px;
+}
+
+.skills-box {
+    margin-right: 5px;
+}
+
+.interests-box {
+    margin-left: 5px;
+}
+
+.skills-box ul {
+    list-style-type: none;
+}
+
+.skills-box ul li {
+    margin-bottom: 10px;
+}
+
+.resume-box ul li::before {
+    content: "\2022";
+    color: #3498db;
+    font-size: 18px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.blue-text {
+    color: #00CED1;
+}
+
+
