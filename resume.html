@@ -4,20 +4,29 @@
 <head>
     <meta name="pranavb" content="resume">
     <link rel="stylesheet" href="resume-style.css">
+    <script src="resumeScript.js"></script>
     <title>Pranav Banwasi - Resume</title>
 </head>
 
 <body>
     <header>
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="pban2.jpeg" alt="Logo" class="logo">
-            </a>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="pban2.jpeg" alt="Logo" class="logo">
+                </a>
+            </div>
+            <div class="download-button">
+                
+                <a href="Pranav_Banwasi_Resume SCND.pdf" target="_blank" id="downloadLink">
+                    Download Resume
+                </a>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="resume-box education-box">
+        <div class="resume-box education-box" id="hidden-box-1">
             <h2>Education</h2>
             <p>University of California, Berkeley</p>
             <p><em>BS in Electrical Engineering and Computer Science</em></p>
@@ -40,7 +49,7 @@
             <h2>Projects</h2>
         </a>
 
-        <div class="resume-box experience-box">
+        <div class="resume-box experience-box" id="hidden-box-2">
             <h2>Experience</h2>
             <ul>
                 <li><span class="blue-text">TDP Intern | Optum Technology</span> | June 2024 - Aug 2024 | Eden Prairie, MN
@@ -64,7 +73,7 @@
         </div>
 
         <div class="skills-interests-container">
-            <div class="resume-box skills-box">
+            <div class="resume-box skills-box" id="hidden-box-3">
                 <h2>Skills</h2>
                 <ul>
                     <li><span class="blue-text">Languages:</span> Python, Java, SQL, JavaScript, HTML, CSS, Scheme, C, RISC-V</li>
@@ -72,7 +81,7 @@
                     <li><span class="blue-text">Libraries:</span> pandas, numPy, matplotlib, Node.js, React.js</li>
                 </ul>
             </div>
-            <div class="resume-box interests-box">
+            <div class="resume-box interests-box" id="hidden-box-4">
                 <h2>Interests</h2>
                 <ul>
                     <li>Anything Sports: NFL, NBA, MLB, EPL, F1, etc.</li>

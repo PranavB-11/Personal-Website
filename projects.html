@@ -5,6 +5,7 @@
     <meta name="pranavb" content="projects">
     <link rel="stylesheet" href="project-style.css">
     <title>Pranav Banwasi - Projects</title>
+    <script src="projScript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -18,62 +19,98 @@
 
     <main>
         <div class="project-box">
-            <h2>FF Projections</h2>
-            <p><em>Python, HTML, CSS</em></p>
-            <ul>
-                <li>Developed a fantasy football projection algorithm for the 2023 season that considers over 40 stat-lines, external factors, and trends such as matchups and injuries to make a helpful projection for each player.</li>
-                <li>Program utilizes 3 seasons of data and has web implementation where a user can enter a player and will receive an output of projections.</li>
-            </ul>
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                FF Projections
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Python, HTML, CSS</em></p>
+                <ul>
+                    <li>Developed a fantasy football projection algorithm for the 2023 season that considers over 40 stat-lines, external factors, and trends such as matchups and injuries to make a helpful projection for each player.</li>
+                    <li>Program utilizes 3 seasons of data and has web implementation where a user can enter a player and will receive an output of projections.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="project-box">
-            <h2>World Generation</h2>
-            <p><em>Java</em></p>
-            <ul>
-                <li>Developed a pseudo-random world generation algorithm that builds a connected room-hallway map based on seeds that can be navigated by a user’s avatar and can be regenerated through saving and loading</li>
-                <li>Program has encounter features that deploy a user into another world/frame for a particular purpose, timing for game use, and a NPC that chases the user following a path generated via BFS</li>
-                <li>Saving and Loading is performed through one .txt file that saves the game in one string</li>
-            </ul>
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                World Generation
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Java</em></p>
+                <ul>
+                    <li>Developed a pseudo-random world generation algorithm that builds a connected room-hallway map based on seeds that can be navigated by a user’s avatar and can be regenerated through saving and loading</li>
+                    <li>Program has encounter features that deploy a user into another world/frame for a particular purpose, timing for game use, and a NPC that chases the user following a path generated via BFS</li>
+                    <li>Saving and Loading is performed through one .txt file that saves the game in one string</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="project-box">
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                Wordnet
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Java</em></p>
+                <ul>
+                    <li>Developed an online Ngram viewer that displays a word(s)’ history lexically and graphically since 1400 constructed through extensions of TreeMap, handling approximately 500,000 words simultaneously given a user’s queries</li>
+                    <li>Implemented hyponym handler which unveils a word(s)’ hyponyms in a specific time frame depending on its historical popularity</li>
+                </ul>
+            </div>
         </div>
 
         <div class="project-box">
-            <h2>Wordnet</h2>
-            <p><em>Java</em></p>
-            <ul>
-                <li>Developed an online Ngram viewer that displays a word(s)’ history lexically and graphically since 1400 constructed through extensions of TreeMap, handling approximately 500,000 words simultaneously given a user’s queries</li>
-                <li>Implemented hyponym handler which unveils a word(s)’ hyponyms in a specific time frame depending on its historical popularity</li>
-            </ul>
+            <h2>
+                <span class="left-arrow" id="arrow1">&#9661;</span>  
+                E-Commerce Website
+                <span class="right-arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>HTML, CSS, Javascript</em></p>
+                <ul>
+                    <li>Developed a modern e-commerce platform modeled after popular fashion and shopping websites</li>
+                    <li>Website supports mobile devices and allows users to add an item to cart, then proceed to a simulated checkout</li>
+                </ul>
+            </div>
         </div>
 
         <div class="project-box">
-            <h2>E-Commerce Website</h2>
-            <p><em>HTML, CSS, Javascript</em></p>
-            <ul>
-                <li>Developed a modern e-commerce platform modeled after popular fashion and shopping websites</li>
-                <li>Website supports mobile devices and allows users to add an item to cart, then proceed to a simulated checkout</li>
-            </ul>
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                Chess AI
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Python, PyTorch, Tensorflow</em></p>
+                <ul>
+                    <li>Developed a Chess AI trained on an open-source move book that utilized DFS to sequence moves together against a human or simulated opponent.</li>
+                    <li>The winning-aspect of the AI was primarily trained on openers and searches for potential checkmates, while most of the gameplay experience was trained on repeated simulations</li>
+                </ul>
+            </div>
         </div>
 
         <div class="project-box">
-            <h2>Chess AI</h2>
-            <p><em>Python, PyTorch, Tensorflow</em></p>
-            <ul>
-                <li>Developed a Chess AI trained on an open-source move book that utilized DFS to sequence moves together against a human or simulated opponent.</li>
-                <li>The winning-aspect of the AI was primarily trained on openers and searches for potential checkmates, while most of the gameplay experience was trained on repeated simulations</li>
-            </ul>
-        </div>
-
-        <div class="project-box">
-            <h2>Pacman AI</h2>
-            <p><em>Python, PyTorch, Tensorflow</em></p>
-            <ul>
-                <li>Developed a Pacman AI that used an A* algorithm based on the following heuristics: Euclidean Distance, Manhattan Distance, "food", and corners to calculate paths.</li>
-                <li>These distance heuristics were calculated using BFS and an "agent" that would search for an ideal path and send it back to Pacman to follow.</li>
-            </ul>
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                Pacman AI
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Python, PyTorch, Tensorflow</em></p>
+                <ul>
+                    <li>Developed a Pacman AI that used an A* algorithm based on the following heuristics: Euclidean Distance, Manhattan Distance, "food", and corners to calculate paths.</li>
+                    <li>These distance heuristics were calculated using BFS and an "agent" that would search for an ideal path and send it back to Pacman to follow.</li>
+                </ul>
+            </div>
         </div>
 
         <form class="favorite-project-form">
-            <label for="favorite-project">Which one is your favorite project?</label>
+            <label for="favorite-project">What project should I work on next?</label>
             <input type="text" id="favorite-project" name="favorite-project">
             <button type="submit">Submit</button>
         </form>

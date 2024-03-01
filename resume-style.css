@@ -11,7 +11,7 @@ header {
     text-align: center;
 }
 
-.logo-container {
+.header-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,4 +169,16 @@ h2 {
     color: #00CED1;
 }
 
+.download-button {
+    padding: 10px;
+    margin-right: 10px; /* Add right margin for separation */
+}
+
+.download-button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #3498db;
+    border-radius: 5px;
+}
 

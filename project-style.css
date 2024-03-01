@@ -32,21 +32,25 @@ header {
 }
 
 main {
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Space the project boxes evenly within the main container */
+    flex-direction: column;
+    align-items: center; /* Center the project boxes horizontally */
 }
 
 .project-box {
     background-color: #222;
-    padding: 15px;
-    margin: 15px;
-    max-width: 400px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(100% - 20px); /* Set the width to 100% minus margin to account for margin space */
+    max-width: 600px; /* Cap the width at 600px */
     transition: transform 0.3s ease-in-out;
     border: 2px solid #3498db;
     border-radius: 8px;
     text-align: center;
+    font-size: 12px;
+    position: relative;
+    cursor: pointer;
 }
 
 .project-box:hover {
@@ -55,8 +59,8 @@ main {
 
 h2 {
     color: #fff;
-    margin-bottom: 15px;
     font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .project-box ul {
@@ -69,5 +73,25 @@ h2 {
     font-size: 16px;
     list-style-type: disc;
     color: #fff;
+}
+
+.box-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.project-box.expanded .box-content {
+    max-height: 1000px; /* Adjust the maximum height as needed */
+}
+
+.left-arrow {
+    float: left; /* Float the left arrow to the left */
+    margin-right: 15px; /* Adjust the margin for spacing */
+}
+
+.right-arrow {
+    float: right; /* Float the right arrow to the right */
+    margin-left: 15px; /* Adjust the margin for spacing */
 }
 
