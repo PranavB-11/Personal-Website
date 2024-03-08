@@ -39,6 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Project Page viewed for: " + duration + " seconds");
 
             // Optional: You can send this duration to a server for more persistent tracking
+            fetch('/logDurationP', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    page: 'projects',
+                    duration: duration,
+                }),
+            });
         }
     });
 });
