@@ -8,17 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (storedStartTime) {
             var duration = Math.floor(new Date().getTime() / 1000) - parseInt(storedStartTime);
 
-            // Increment the click count
             var clickCount = localStorage.getItem("downloadButtonClicks") || 0;
             clickCount++;
 
             localStorage.setItem("downloadButtonClicks", clickCount);
 
-            // Display the updated click count and duration
             console.log("Download button clicked " + clickCount + " times.");
             console.log("Resume Page viewed for: " + duration + " seconds");
 
-            // Send duration and clicks to the server
             fetch('/logDurationR', {
                 method: 'POST',
                 headers: {

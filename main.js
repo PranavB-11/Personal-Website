@@ -1,30 +1,29 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const port = 3000;
 
+let totalViews = 0;
+
 app.use(express.json());
 
-function getCookie(cookieString, name) {
-    let cookie = cookieString.split(';').find(cookie => cookie.trim().startsWith('views='));
-    if (cookie) {
-      return cookie.split('=')[1];
-    }
-    return 0;
-  }
+app.use(express.json());
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
-    let totalViews = getCookie(req.headers.cookie, 'views');
     totalViews++;
-  
-    let html = fs.readFileSync(__dirname + '/index.html', 'utf8');
-    res.setHeader('Set-Cookie', `views=${totalViews}`);
 
-    res.send(html);
+    // Check if the 'totalViews' cookie exists
+    const viewsCookie = req.cookies.totalViews || 0;
+
+    const updatedViews = parseInt(viewsCookie) + 1;
+
+    res.cookie('totalViews', updatedViews, { maxAge: 365 * 24 * 60 * 60 * 1000 }); // Cookie lasts for 1 year
+
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
-
 
 app.use(express.static(path.join(__dirname)));
 
