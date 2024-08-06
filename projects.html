@@ -12,7 +12,7 @@
     <header>
         <div class="logo-container">
             <a href="index.html">
-                <img src="pban2.jpeg" alt="Logo" class="logo">
+                <img src="pban.jpeg" alt="Logo" class="logo">
             </a>
         </div>
     </header>
@@ -109,12 +109,53 @@
             </div>
         </div>
 
-        <form class="favorite-project-form">
-            <label for="favorite-project">What project should I work on next?</label>
-            <input type="text" id="favorite-project" name="favorite-project">
-            <button type="submit">Submit</button>
-        </form>
+        <div class="project-box">
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                Noteworthy A Capella Website
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>React, HTML, JavaScript, Figma</em></p>
+                <ul>
+                    <li>Developed a website for Noteworthy, an A Cappella group at UC Berkeley that has over 5 million views on various social platforms</li>
+                    <li>Website features a video carousel utilizing the React Slick library and member cards with popup overlays displaying
+                        member bios, roles, and information. The website design was inspired by a simplistic/modern take on Noteworthy’s color themes.</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="project-box">
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                Chess AI
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Python, PyTorch, Tensorflow</em></p>
+                <ul>
+                    <li>Developed a Chess AI trained on an open-source move book that utilized DFS to sequence moves together against a human or simulated opponent.</li>
+                    <li>The winning-aspect of the AI was primarily trained on openers and searches for potential checkmates, while most of the gameplay experience was trained on repeated simulations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <h2>
+                <span class="left-arrow arrow" id="arrow1">&#9661;</span>  
+                RISC-V CPU
+                <span class="right-arrow arrow" id="arrow2">&#9661;</span>
+            </h2>
+            <div class="box-content" style="display: none;">
+                <p><em>Logism, RISC-V, C</em></p>
+                <ul>
+                    <li>Created a CPU that handles every 32-bit RISC-V instruction and memory processes through a register file, branch
+                        instruction handler, DMEM, load/storing mechanisms, immediate generator, and control logic.</li>
+                    <li>The control logic interprets various instructions and directs which procedures must occur through a ROM with several binary inputs such as instruction type, program counter manipulations through branching and jumping,
+                        writing to a register, and loading/storing to particular memory addresses.</li>
+                </ul>
+            </div>
+        </div>
     </main>
 </body>
 
