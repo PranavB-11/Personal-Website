@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 
-
 app.use(cors());
 app.use(express.json());
+
 
 const mongoURI = process.env.MONGODB_URI;
 
@@ -14,7 +14,10 @@ mongoose.connect(mongoURI, {
     useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB connected'))
-.catch(err => console.error('MongoDB connection error:', err));
+.catch((err) => {
+    console.error('MongoDB connection error:', err);
+    process.exit(1);  
+});
 
 const clickEventSchema = new mongoose.Schema({
     linkType: String,
@@ -28,9 +31,9 @@ app.post('/track-click', async (req, res) => {
         const { linkType, timestamp } = req.body;
 
         const newEvent = new ClickEvent({ linkType, timestamp });
-        await newEvent.save();
+        const savedEvent = await newEvent.save();
 
-        res.status(201).send('Click event saved');
+        res.status(201).json(savedEvent);
     } catch (error) {
         console.error(error);
         res.status(500).send('Server error');
