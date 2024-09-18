@@ -7,7 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://pranavsbanwasi:siE7m9Es4lLR94xI@cluster0.t5t4q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+const mongoURI = process.env.MONGODB_URI;
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -16,7 +18,7 @@ mongoose.connect('mongodb+srv://pranavsbanwasi:siE7m9Es4lLR94xI@cluster0.t5t4q.m
 
 const clickEventSchema = new mongoose.Schema({
     linkType: String,
-    timestamp: String,
+    timestamp: String,s
 });
 
 const ClickEvent = mongoose.model('ClickEvent', clickEventSchema);

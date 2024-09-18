@@ -2,7 +2,7 @@
 function logClick(event, linkType) {
     const timestamp = new Date().toISOString();
 
-    fetch('http://localhost:3000/track-click', {
+    fetch('https://personal-website-bnl4.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
