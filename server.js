@@ -18,7 +18,7 @@ mongoose.connect(mongoURI, {
 
 const clickEventSchema = new mongoose.Schema({
     linkType: String,
-    timestamp: String,s
+    timestamp: String,
 });
 
 const ClickEvent = mongoose.model('ClickEvent', clickEventSchema);
@@ -35,6 +35,10 @@ app.post('/track-click', async (req, res) => {
         console.error(error);
         res.status(500).send('Server error');
     }
+});
+
+app.get('/', (req, res) => {
+    res.send('Backend is running and ready to track clicks!');
 });
 
 const PORT = process.env.PORT || 3000;
